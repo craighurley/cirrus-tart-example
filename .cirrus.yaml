@@ -1,0 +1,14 @@
+---
+env:
+  env_parameter: root-level
+
+task:
+  name: hello
+  macos_instance:
+    image: ghcr.io/cirruslabs/macos-ventura-base:latest
+  hello_script:
+    - echo "Hello from within a Tart VM!"
+    - echo "Here is my CPU info:"
+    - sysctl -n machdep.cpu.brand_string
+    - "echo environment variable set by -e or at root/task level: $env_parameter"
+    - sleep 5
