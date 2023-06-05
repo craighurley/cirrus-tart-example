@@ -44,6 +44,12 @@ tart run ventura-base --dir="tmp:~/tmp/:ro" --vnc-experimental
 
 Note: The Virtualization.Framework's VNC server (`--vnc-experimental`) results in a visually better display than the default (`--vnc`).
 
+SSH to the VM:
+
+```sh
+ssh admin@$(tart ip ventura-base)
+```
+
 ## cirrus-cli
 
 Validate `.cirrus.yml` file:
